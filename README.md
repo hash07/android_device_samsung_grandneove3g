@@ -1,4 +1,4 @@
-##Device configuration for Samsung Galaxy Grand Neo Plus GT-I9060i (grandneove3g)
+##Device configuration for Samsung Galaxy Grand Neo Plus GT-I9060I (grandneove3g)
 
 =====================================
 

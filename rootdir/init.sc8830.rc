@@ -20,16 +20,6 @@ on init
     mkdir /productinfo 0771 system system
     export LD_SHIM_LIBS /system/lib/hw/hwcomposer.sc8830.so|libmemoryheapion_sprd.so:/system/lib/hw/camera.sc8830.so|libmemoryheapion_sprd.so:/system/lib/libril.so|libril_shim.so:/system/bin/gpsd|libgps_shim.so
 
-    # See storage config details at https://source.android.com/devices/storage/
-
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
-    symlink /sdcard /storage/sdcard0
-
-    # map "real" external storages paths also in same way. backwards compatibility.
-    symlink /storage/extSdCard /mnt/extSdCard
-    symlink /storage/usbdisk /mnt/usbdisk
-
 on fs
     mount_all /fstab.sc8830
     mount pstore pstore /sys/fs/pstore
@@ -144,13 +134,15 @@ on boot
 
     chown system system /sys/class/graphics/fb0/dynamic_mipi_clk
 
+# usb detect
+    mkdir /dev/bus 0755 root root
+    mkdir /dev/bus/usb 0755 root root
+
+# OTG Test
+    chown system radio /sys/class/host_notify/usb_otg/booster
+    chmod 0664 /sys/class/host_notify/usb_otg/booster
+
 on charger
-
-    exec sfsck /dev/block/mmcblk0p23 ext4
-    mount ext4 /dev/block/mmcblk0p23 /system ro,barrier=1 wait
-    exec sfsck /dev/block/mmcblk0p25 ext4
-    mount ext4 /dev/block/mmcblk0p25 /data noatime,nosuid,nodev,nomblk_io_submit wait,encryptable=footer,check
-
     class_start core
     start console
     start slog

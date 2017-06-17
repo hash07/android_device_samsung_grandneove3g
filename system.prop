@@ -1,11 +1,8 @@
-#
-# system.prop for core33g
-#
-ro.sf.lcd_density=240
-ro.sf.lcd_width=154
-ro.sf.lcd_height=90
+ro.sf.lcd_density=200
+ro.sf.lcd_width=54
+ro.sf.lcd_height=96
 ro.opengles.version=131072
-ro.product.hardware=CORE3_V1.0.0
+ro.product.hardware=GRANDNEOVE_V1.0.0
 
 debug.hwui.render_dirty_regions=false
 
@@ -43,6 +40,7 @@ ro.config.ksm.support=true
 
 #zram config
 ro.config.zram.support=true
+ro.board_ram_size=mid
 
 #if our product not support drm,set as false
 drm.service.enabled=true
@@ -64,14 +62,6 @@ config.disable_atlas=true
 # System prop for DisplayInfo cache
 config.displayinfo.use_cache=true
 
-# SAMP_SPCM
-sys.config.samp_enable=true
-sys.config.samp_spcm_enable=true
-sys.config.spcm_kill_skip=true
-sys.config.spcm_db_enable=true
-sys.config.spcm_db_launcher=true
-sys.config.samp_hotness_enable=false
-
 # RIL
 ro.com.android.dataroaming=false
 ro.msms.phone_count=2
@@ -85,8 +75,8 @@ ro.ril.hsxpa=1
 ro.ril.gprsclass=10
 ril.sim2.present=1
 persist.radio.multisim.config=dsds
-ro.telephony.ril_class=core33gRIL
-ro.telephony.prop_class=core33gRIL$TelephonyPropertyProvider
+ro.telephony.ril_class=grandneove3gRIL
+ro.telephony.prop_class=grandneove3gRIL$TelephonyPropertyProvider
 ro.telephony.ril.config=setPrefNwTypeOnUnsolConnected,simactivation
 ro.telephony.ril.socket_name=rild,rild1,rild2
 ro.ril.telephony.mqanelements=6

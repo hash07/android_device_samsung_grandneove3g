@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/samsung/core33g
+LOCAL_PATH := device/samsung/grandneove3g
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -104,7 +104,7 @@ AUDIO_CONFIGS := \
 	$(LOCAL_PATH)/configs/audio/audio_hw.xml \
 	$(LOCAL_PATH)/configs/audio/audio_para \
 	$(LOCAL_PATH)/configs/audio/codec_pga.xml \
-        $(LOCAL_PATH)/configs/audio/tiny_hw.xml \
+    $(LOCAL_PATH)/configs/audio/tiny_hw.xml
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(AUDIO_CONFIGS),$(f):system/etc/$(notdir $(f))) \
@@ -197,8 +197,8 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_core33g
-PRODUCT_DEVICE := core33g
+PRODUCT_NAME := full_grandneove3g
+PRODUCT_DEVICE := grandneove3g
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SM-G360H
+PRODUCT_MODEL := GT-I9060I

@@ -37,11 +37,11 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /**
- * Custom RIL to handle unique behavior of SPRD RIL
+ * Custom RIL to handle unique behavior of Grand Neo Plus
  *
  * {@hide}
  */
-public class core33gRIL extends SamsungSPRDRIL implements CommandsInterface {
+public class grandneove3gRIL extends SamsungSPRDRIL implements CommandsInterface {
 
     public static class TelephonyPropertyProvider implements TelephonyManager.TelephonyPropertyProvider {
 
@@ -104,11 +104,11 @@ public class core33gRIL extends SamsungSPRDRIL implements CommandsInterface {
         }
     }
 
-    public core33gRIL(Context context, int preferredNetworkType, int cdmaSubscription) {
+    public grandneove3gRIL(Context context, int preferredNetworkType, int cdmaSubscription) {
         this(context, preferredNetworkType, cdmaSubscription, null);
     }
 
-    public core33gRIL(Context context, int preferredNetworkType,
+    public grandneove3gRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
         super(context, preferredNetworkType, cdmaSubscription, instanceId);
     }

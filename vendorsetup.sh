@@ -18,10 +18,10 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
-for rom in rr cm
+for rom in cm
 do
   for targetBuildVariant in eng user userdebug
   do
-    add_lunch_combo ${rom}_core33g-${targetBuildVariant}
+    add_lunch_combo ${rom}_grandneove3g-${targetBuildVariant}
   done
 done
