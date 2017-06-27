@@ -1,3 +1,4 @@
+import /init.wifi.rc
 
 on early-init
     chown system system /sys/devices/platform/panel/backlight/panel/brightness

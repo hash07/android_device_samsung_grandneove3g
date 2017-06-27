@@ -36,17 +36,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Rootdir files
 ROOTDIR_FILES := \
-	$(LOCAL_PATH)/rootdir/init.rc \
+	$(LOCAL_PATH)/rootdir/fstab.sc8830 \
 	$(LOCAL_PATH)/rootdir/init.board.rc \
-	$(LOCAL_PATH)/rootdir/init.recovery.board.rc \
+	$(LOCAL_PATH)/rootdir/init.grandneove3g_base.rc \
+	$(LOCAL_PATH)/rootdir/init.rc \
 	$(LOCAL_PATH)/rootdir/init.sc8830.rc \
 	$(LOCAL_PATH)/rootdir/init.sc8830.usb.rc \
-	$(LOCAL_PATH)/rootdir/init.sc8830_ss.rc \
-	$(LOCAL_PATH)/rootdir/init.grandneove3g.rc \
-	$(LOCAL_PATH)/rootdir/init.grandneove3g_base.rc \
 	$(LOCAL_PATH)/rootdir/init.wifi.rc \
-	$(LOCAL_PATH)/rootdir/ueventd.sc8830.rc \
-	$(LOCAL_PATH)/rootdir/fstab.sc8830
+	$(LOCAL_PATH)/rootdir/ueventd.sc8830.rc
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(ROOTDIR_FILES),$(f):root/$(notdir $(f)))
