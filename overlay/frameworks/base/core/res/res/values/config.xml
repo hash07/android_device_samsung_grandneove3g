@@ -161,6 +161,9 @@
     -->
     <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
 
+    <!-- IpReachability monitor enable/Disable -->
+    <bool translatable="false" name="config_wifi_ipreachability_monitor">false</bool>
+
     <!-- Boolean indicating if current platform supports bluetooth wide band
          speech -->
     <bool name="config_bluetooth_wide_band_speech">false</bool>
@@ -237,4 +240,8 @@
          services/core/java/com/android/server/policy/policy/impl/PhoneWindowManager.java
     -->
     <integer name="config_longPressOnAppSwitchBehavior">1</integer>
+
+    <!-- Older rotation sensors are not setting event.timestamp correctly. Setting to
+         true will use SystemClock.elapsedRealtimeNanos() to set timestamp. -->
+    <bool name="config_useSystemClockforRotationSensor">true</bool>
 </resources>
