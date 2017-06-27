@@ -1,4 +1,5 @@
 # Un-categorized
+bin/refnotify
 bin/engpc
 lib/libatparser.so
 
@@ -28,9 +29,10 @@ bin/macloader
 
 # Bluetooth
 vendor/lib/libbt-vendor.so
-vendor/firmware/BCM4343A0_001.001.034.0056.0197_M_ORC_Core3.hcd
+vendor/firmware/BCM43430A1_001.002.009.0013.0018_ORC_GrandNeo_VE.hcd
 
 # RIL
+bin/at_distributor
 bin/rild
 bin/modemd
 bin/nvitemd
@@ -61,6 +63,4 @@ lib/libomx_m4vh263enc_hw_sprd.so
 # HAL
 lib/hw/camera.sc8830.so
 lib/hw/gralloc.sc8830.so
-lib/hw/hwcomposer.sc8830.so
 lib/hw/sensors.sc8830.so
-lib/hw/sprd_gsp.sc8830.so
