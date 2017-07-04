@@ -24,11 +24,6 @@ extpagain2g=0
 
 #Revision 0.2 PA parameters for 2.4GHz, measured at Antenna Port 1029
 pa2ga0=0xff81,0x1be0,0xfcf9
-#pa2ga0=0xff88,0x1B19,0xfd14
-
-#pa0b0=0x1be0
-#pa0b1=0xfcf9
-#pa0b2=0xff81
 
 AvVmid_c0=0x0,0xc8
 cckpwroffset0=5
