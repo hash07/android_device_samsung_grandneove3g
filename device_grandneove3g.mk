@@ -75,10 +75,6 @@ PRODUCT_PACKAGES += \
 	libomx_mp3dec_sprd.so \
 	libomx_vpxdec_hw_sprd.so
 
-# Lights
-PRODUCT_PACKAGES += \
-	lights.sc8830
-
 # Device-specific packages
 PRODUCT_PACKAGES += \
 	SamsungServiceMode
@@ -128,7 +124,8 @@ PRODUCT_PACKAGES += \
 	hostapd
 
 WIFI_CONFIGS := \
-	$(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf \
+	$(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf \
+	$(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf \
 	$(LOCAL_PATH)/configs/wifi/nvram_net.txt
 
 PRODUCT_COPY_FILES += \
@@ -146,6 +143,7 @@ PERMISSION_XML_FILES := \
 	frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml \
 	frameworks/native/data/etc/android.hardware.camera.front.xml \
 	frameworks/native/data/etc/android.hardware.camera.xml \
+	frameworks/native/data/etc/android.hardware.sensor.compass.xml \
 	frameworks/native/data/etc/android.hardware.bluetooth_le.xml \
 	frameworks/native/data/etc/android.hardware.location.gps.xml \
 	frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml \

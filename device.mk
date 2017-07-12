@@ -38,9 +38,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ROOTDIR_FILES := \
 	$(LOCAL_PATH)/rootdir/fstab.sc8830 \
 	$(LOCAL_PATH)/rootdir/init.board.rc \
+	$(LOCAL_PATH)/rootdir/init.grandneove3g.rc \
 	$(LOCAL_PATH)/rootdir/init.grandneove3g_base.rc \
 	$(LOCAL_PATH)/rootdir/init.rc \
 	$(LOCAL_PATH)/rootdir/init.sc8830.rc \
+	$(LOCAL_PATH)/rootdir/init.sc8830_ss.rc \
 	$(LOCAL_PATH)/rootdir/init.sc8830.usb.rc \
 	$(LOCAL_PATH)/rootdir/init.wifi.rc \
 	$(LOCAL_PATH)/rootdir/ueventd.sc8830.rc
@@ -57,9 +59,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-hdpi-2048-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
-
-# WiFi
-$(call inherit-product, hardware/broadcom/wlan/bcmdhd/firmware/bcm4343/device-bcm.mk)
 
 # For userdebug builds
 ADDITIONAL_DEFAULT_PROPERTIES += \
