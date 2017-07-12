@@ -113,6 +113,19 @@ public class grandneove3gRIL extends SamsungSPRDRIL implements CommandsInterface
         super(context, preferredNetworkType, cdmaSubscription, instanceId);
     }
 
+    // This thing... it causes lots of headaches due to RIL crashes
+    @Override
+    public void
+    getHardwareConfig (Message result) {
+        riljLog("Ignoring call to 'getHardwareConfig'");
+        if (result != null) {
+            CommandException ex = new CommandException(
+                CommandException.Error.REQUEST_NOT_SUPPORTED);
+            AsyncResult.forMessage(result, null, ex);
+            result.sendToTarget();
+        }
+    }
+
     @Override
     public void startLceService(int reportIntervalMs, boolean pullMode, Message response) {
         riljLog("Link Capacity Estimate (LCE) service is not supported!");
