@@ -83,5 +83,3 @@
 /dev/akm8963_dev        0660     system      system
 /dev/umts_router        0660     system      radio
 
-# for PL2303 driver
-/dev/ttyUSB*            0660     system      usb
