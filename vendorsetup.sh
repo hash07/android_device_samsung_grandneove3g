@@ -18,10 +18,9 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
-for rom in cm
-do
-  for targetBuildVariant in eng user userdebug
-  do
-    add_lunch_combo ${rom}_grandneove3g-${targetBuildVariant}
-  done
+# Patch the source first
+sh device/samsung/grandneove3g/patches/apply.sh
+
+for i in eng user userdebug; do
+add_lunch_combo lineage_grandneove3g-${i};
 done

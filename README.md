@@ -17,24 +17,14 @@ Display | 480 x 800 pixels, 5.0"
 Rear Camera  | 5.0 MP, LED flash
 Front Camera | 2.0 MP
 
-## Patches
+##Building instructions
 
-* [external/tinyalsa](https://github.com/CyanogenMod/android_external_tinyalsa/compare/cm-13.0...ngoquang2708:cm-13.0.patch)
-* [frameworks/av](https://github.com/CyanogenMod/android_frameworks_av/compare/cm-13.0...ngoquang2708:cm-13.0.patch)
-* [frameworks/base](https://github.com/CyanogenMod/android_frameworks_base/compare/cm-13.0...ngoquang2708:cm-13.0.patch)
-* [frameworks/opt/telephony](https://github.com/CyanogenMod/android_frameworks_opt_telephony/compare/cm-13.0...ngoquang2708:cm-13.0.patch)
-* [hardware/libhardware](https://github.com/CyanogenMod/android_hardware_libhardware/compare/cm-13.0...ngoquang2708:cm-13.0.patch)
-* [system/core](https://github.com/CyanogenMod/android_system_core/compare/cm-13.0...ngoquang2708:cm-13.0.patch)
-* [system/media](https://github.com/CyanogenMod/android_system_media/compare/cm-13.0...ngoquang2708:cm-13.0.patch)
-* [build](https://github.com/CyanogenMod/android_build/compare/cm-13.0...ngoquang2708:cm-13.0.patch)
+### What do you need?
+* 50GB left of your hard disk space
+* Basic skills / knowledge of Linux
 
-### How to apply
-To apply patches 
-for example:  audio.patch
- got to frameworks/av  copy the patch in that directory and open 
-terminal and run command 
-where 1st command is to apply patch and 
-the 2nd for to revert the patches which applied earlier
-
-		patch -p1 < audio.patch
-		patch -R -p1 <audio.patch
+### Building steps
+* 1. Sync Android source
+* 2. Copy this file ([grandneove3g.xml](https://github.com/hash07/android_local_manifests/blob/cm-14.1/grandneove3g.xml)) to `.repo/local_manifests` (if that folder doesn't exist then "mkdir" it)
+* 3. `repo sync` again
+* 5. then type `. build/envsetup.sh && brunch grandneove3g`
