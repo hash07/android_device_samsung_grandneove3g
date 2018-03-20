@@ -3,7 +3,7 @@
 # vendorsetup.sh is sourced by build/envsetup.sh in root of android build tree. Hope that nobody can correctly source it not from root of android tree.
 build_root=$(pwd)
 echo "======================= Applying patches: enum ======================="
-patches_path="$build_root/device/samsung/core33g/patches/"
+patches_path="$build_root/device/samsung/grandneove3g/patches/"
 
 #pushd "$patches_path" > /dev/null
 cd $patches_path
